@@ -411,11 +411,24 @@
     Step 2: Install BepInEx Mod Loader
   </a>
   
+    <nav class="md-nav" aria-label="Step 2: Install BepInEx Mod Loader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-bepinex-installation" class="md-nav__link">
+    Verify BepInEx Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-download-kino" class="md-nav__link">
-    Step 3: Download KiNO
+  <a href="#step-3-install-kino" class="md-nav__link">
+    Step 3: Install KiNO
   </a>
   
 </li>
@@ -545,11 +558,24 @@
     Step 2: Install BepInEx Mod Loader
   </a>
   
+    <nav class="md-nav" aria-label="Step 2: Install BepInEx Mod Loader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-bepinex-installation" class="md-nav__link">
+    Verify BepInEx Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-download-kino" class="md-nav__link">
-    Step 3: Download KiNO
+  <a href="#step-3-install-kino" class="md-nav__link">
+    Step 3: Install KiNO
   </a>
   
 </li>
@@ -613,33 +639,48 @@
 <p>Go to the <a href="https://github.com/BepInEx/BepInEx/releases">BepInEx Releases Page</a> and download the latest stable release.</p>
 <p>Make sure <strong>NOT</strong> to download the <em>Source Code</em>. What we require is the <code>BepInEx_x64_[version].zip</code> whereas <code>version</code> is the version you are installing at the moment.</p>
 <p>If you're running Windows in 32bit, you need the <code>x86</code> file instead of <code>x64</code> as chosen in our example.</p>
+<details class="faq">
+<summary>Do I need 64 or 32 bit?</summary>
+<p>You can easily check if your system is running 32 or 64 bit by going into<br />
+<code>Windows Settings</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42Z"/></svg></span> <code>System</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42Z"/></svg></span> <code>About</code></p>
+<p><img alt="Example image of the Windows settings highlighting the &quot;System Type&quot; value in the before mentioned About page" src="../img/win_settings_sys_type.png" /></p>
+</details>
+<details class="info" open="open">
+<summary>Example for 64bit</summary>
 <p><img alt="Example image from BepInEx's releases page" src="../img/bepinex_download.png" /></p>
+</details>
 <p>Once downloaded, extract the contents of the <code>.zip</code> archieve into your CarX Drift Racing Online folder.</p>
 <p><img alt="Example image of the CarX game folder with the BepInEx files extracted into it" src="../img/bepinex_extraction.png" /></p>
-<h3 id="step-3-download-kino">Step 3: Download KiNO</h3>
-<div class="admonition todo">
-<p class="admonition-title">//TODO: THE REST FROM HERE</p>
+<h4 id="verify-bepinex-installation">Verify BepInEx Installation</h4>
+<p>To verify that you have successfully installed BepInEx, start your game and check if a Log file gets created in your BepInEx folder inside the CarX game folder</p>
+<p><img alt="Example iamge showing the LogOutput.txt inside our BepInEx folder" src="../img/bepinex_verify_logfile.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">I do <ins>not</ins> have that file</p>
+<p>If the <code>LogOutput.txt</code> does <ins><strong>not</strong></ins> generate, it's very likely that you have missed a point, or perhaps the BepInEx installation has changed.</p>
+<p>Please refer to the official BepInEx documentation on how to install it here:<br />
+<a href="https://docs.bepinex.dev/articles/user_guide/installation/index.html">https://docs.bepinex.dev/articles/user_guide/installation/index.html</a></p>
 </div>
-<ol>
-<li>
-<p>Download the latest version of <strong>KiNO</strong> from the <a href="https://github.com/trbflxr/kino/releases">release tab</a> <strong>(DO NOT DOWNLOAD SOURCE CODE)</strong>.<br />
-    Extract the following files from <strong>release_%version%.zip</strong>:<br />
-     &gt; assimp.dll<br />
-     KN_Core.dll<br />
-     KN_Loader.dll<br />
-     KN_Updater.exe</p>
-<pre><code>inside `CarX Drift Racing Online\BepInEx\plugins`.
-</code></pre>
-<p>If you don't have the <code>plugins</code> folder inside the <code>BepInEx</code> then either create it yourself or start the game for it to be created automatically.</p>
-</li>
-<li>
-<p>If mod doesn't work, or you get <code>VCRUNTIME140.dll Is Missing</code> error, you might have to download and install the <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019</a>. You will need the <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">vcredist_x64.exe</a>.</p>
-</li>
-<li>
-<p>A short description of the features can be found <a href="README.md">here</a>.</p>
-</li>
-</ol>
+<h3 id="step-3-install-kino">Step 3: Install KiNO</h3>
+<div class="admonition warning inline end">
+<p class="admonition-title">Do <ins><strong>NOT</strong></ins> download the source code</p>
+</div>
+<p>Once you have installed BepInEx and verified that the Log file gets created to ensure BepInEx works properly, continue by downloading the latest release of KiNO in the <a href="https://github.com/trbflxr/kino/releases">release page</a>.</p>
+<p>Once you have downloaded the release file, you need to extract the contents of it into your BepInEx <code>plugins</code> folder.</p>
+<div class="admonition info">
+<p class="admonition-title">If you don't have the <code>plugins</code> folder, you can create it yourself</p>
+</div>
+<p><img alt="Example image showing the extracted files from the zip in the plugins folder" src="../img/kino_extraction.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">I'm getting <code>VCRUNTIME140.dll Is Missing</code> error</p>
+<p>Please install the <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019</a>.<br />
+You will need the <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">vcredist_x64.exe</a>.</p>
+</div>
+<p>That's it, when you start up CarX now it should be ready. Please take a look at our <a href="../usage/">usage guide</a> to get started!</p>
+<hr />
 <h2 id="русский">Русский:</h2>
+<div class="admonition todo">
+<p class="admonition-title">Needs contribution by someone speaking the language to be reworked similar to the English version!</p>
+</div>
 <ol>
 <li>Убедитесь что вы находитесь на модовой версии игры. Для этого откройте стим, правый клик по <strong>CarX Drift Racing Online</strong>, затем <strong><code>Свойства...</code></strong>, перейдите во вкладку <strong><code>БЕТА-ВЕРСИИ</code></strong> и из списка выбирете версию игры с припиской <strong>(moddable)</strong>.</li>
 <li>Установите <a href="https://github.com/BepInEx/BepInEx/releases">BepInEx mod loader</a>, если ещё не установлен.<br />
