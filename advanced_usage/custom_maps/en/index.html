@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="KiNO is an extensive modification for CarX Drift Racing Online offering a lot of useful features and customizability, including lighting and livery sharing features.
+">
+      
+      
+      
+        <link rel="canonical" href="https://locomoco28.github.com/kino/advanced_usage/custom_maps/en/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+    
+    
+      
+        <title>Map creation (EN) - KiNO Mod for CarX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1c3799f8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#map-creation-for-kino--wip" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="KiNO Mod for CarX" class="md-header__button md-logo" aria-label="KiNO Mod for CarX" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KiNO Mod for CarX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Map creation (EN)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/locomoco28/kino" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Welcome to KiNO Mod
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../getting_started/installation/" class="md-tabs__link">
+        Getting started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Advanced usage
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../troubleshooting/" class="md-tabs__link">
+      Troubleshooting
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../credits/" class="md-tabs__link">
+      Credits
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../tos/" class="md-tabs__link">
+      Terms of Use
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="KiNO Mod for CarX" class="md-nav__button md-logo" aria-label="KiNO Mod for CarX" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    KiNO Mod for CarX
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/locomoco28/kino" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Welcome to KiNO Mod
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_started/usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Advanced usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced usage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced usage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Custom maps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Custom maps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Custom maps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Intro into KiNO Maps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Map creation (EN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Map creation (EN)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-installation" class="md-nav__link">
+    Unity installation.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinomap-sdk-installation" class="md-nav__link">
+    KinoMap SDK installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinomap-sdk-project-set-up" class="md-nav__link">
+    KinoMap SDK project set up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-for-map-creation" class="md-nav__link">
+    Preparation for map creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation for map creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lighting-in-the-editor" class="md-nav__link">
+    Lighting in the editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-scene-creation" class="md-nav__link">
+    Map scene creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-map-content" class="md-nav__link">
+    Adding the map content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes-regarding-the-map-structure" class="md-nav__link">
+    Important notes regarding the map structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-map-structure" class="md-nav__link">
+    Setting up the map structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the map structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surfaces" class="md-nav__link">
+    Surfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpacking-the-prefab" class="md-nav__link">
+    Unpacking the prefab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-structure" class="md-nav__link">
+    Map structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    Optimization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colliders" class="md-nav__link">
+    Colliders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spawn-points" class="md-nav__link">
+    Spawn points
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maptool-and-building-the-map-asset-bundle" class="md-nav__link">
+    MapTool and building the map asset bundle
+  </a>
+  
+    <nav class="md-nav" aria-label="MapTool and building the map asset bundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maptool" class="md-nav__link">
+    MapTool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-map" class="md-nav__link">
+    Building the map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ru/" class="md-nav__link">
+        Map creation (RU)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy/" class="md-nav__link">
+        Map Conversion (Legacy)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tos/" class="md-nav__link">
+        Terms of Use
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-installation" class="md-nav__link">
+    Unity installation.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinomap-sdk-installation" class="md-nav__link">
+    KinoMap SDK installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinomap-sdk-project-set-up" class="md-nav__link">
+    KinoMap SDK project set up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-for-map-creation" class="md-nav__link">
+    Preparation for map creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation for map creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lighting-in-the-editor" class="md-nav__link">
+    Lighting in the editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-scene-creation" class="md-nav__link">
+    Map scene creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-map-content" class="md-nav__link">
+    Adding the map content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes-regarding-the-map-structure" class="md-nav__link">
+    Important notes regarding the map structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-map-structure" class="md-nav__link">
+    Setting up the map structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the map structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surfaces" class="md-nav__link">
+    Surfaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpacking-the-prefab" class="md-nav__link">
+    Unpacking the prefab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-structure" class="md-nav__link">
+    Map structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    Optimization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colliders" class="md-nav__link">
+    Colliders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spawn-points" class="md-nav__link">
+    Spawn points
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maptool-and-building-the-map-asset-bundle" class="md-nav__link">
+    MapTool and building the map asset bundle
+  </a>
+  
+    <nav class="md-nav" aria-label="MapTool and building the map asset bundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maptool" class="md-nav__link">
+    MapTool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-map" class="md-nav__link">
+    Building the map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/locomoco28/kino/edit/master/docs/advanced_usage/custom_maps/en.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="map-creation-for-kino--wip">Map creation for Kino  (WIP)</h1>
+<p>This guide will help you set up the enviroment and start creation custom maps for KINO bundle map loader.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Unity editor <code>2020.3.25f1</code></li>
+<li>3D modeling software</li>
+</ul>
+<h2 id="preparation">Preparation</h2>
+<h3 id="unity-installation">Unity installation.</h3>
+<p>First of all you need to install Unity Hub. You can download it using the following link:<br />
+<a href="https://unity3d.com/get-unity/download">https://unity3d.com/get-unity/download</a></p>
+<p>Then click on the <strong>Download Unity Hub</strong> button, download and install it.</p>
+<p><img alt="unity_hub" src="../../../img/unity_hub.png" />  </p>
+<hr />
+<p>Now let's get to Unity installation. Currently the game uses <code>2020.3.25f1</code> version of Unity Editor.<br />
+You can download it using the following link:<br />
+<a href="https://unity3d.com/get-unity/download/archive">https://unity3d.com/get-unity/download/archive</a></p>
+<p>Here you need to choose the required version. Currently that is <code>2020.x</code></p>
+<p><img alt="unity_header" src="../../../img/unity_header.png" /></p>
+<p>Then find <code>Unity 2020.3.25f1</code> in the list and click on the <strong>Unity Hub</strong> button.</p>
+<p><img alt="unity_download" src="../../../img/unity_download.png" />  </p>
+<p>After the installation the required editor should appear in the list.  </p>
+<p><img alt="unity_hub_installs" src="../../../img/unity_hub_installs.png" />  </p>
+<p>Then you need to install additional modules for building the asset bundle for <strong>Windows</strong> and optionally for <strong>OSX</strong><br />
+To do that select the required editor and click on the <strong>gear</strong> then click on <strong>Add modules</strong>.</p>
+<p><img alt="unity_hub_add" src="../../../img/unity_hub_add.png" />  </p>
+<p>Remove the check mark from <strong>Visual Studio</strong>, if you don't need it.</p>
+<p><img alt="unity_hub_vs" src="../../../img/unity_hub_vs.png" />  </p>
+<p>Then add the <strong>Windows Build Support</strong> and optionally <strong>Mac Build Support</strong> components, then click on <strong>Install</strong>.</p>
+<p><img alt="unity_hub_modules" src="../../../img/unity_hub_modules.png" />  </p>
+<p>Unity installation is complete!</p>
+<h3 id="kinomap-sdk-installation">KinoMap SDK installation</h3>
+<p>Currently <strong>Kino</strong> map creation tools are in a form of a Unity project.<br />
+You can download the tools using the following link:<br />
+<a href="https://github.com/trbflxr/kino_map_sdk">https://github.com/trbflxr/kino_map_sdk</a></p>
+<p>You can download the project using <strong>Git</strong> or as a <strong>.zip</strong> file.</p>
+<ul>
+<li>Installation using git <strong>git</strong>: <code>git clone https://github.com/trbflxr/kino_map_sdk</code></li>
+<li>Installation using <strong>.zip</strong> file: click on the <strong>Code</strong> button, then <strong>Download ZIP</strong></li>
+</ul>
+<p><img alt="sdk_zip" src="../../../img/sdk_zip.png" />  </p>
+<p>Project is downloaded. Now we can get to setting up Unity.</p>
+<h3 id="kinomap-sdk-project-set-up">KinoMap SDK project set up</h3>
+<p>First of all you need to add the project to <strong>Unity Hub</strong>. To do that open <strong>Unity Hub</strong> and click on <strong>Open</strong> button.<br />
+In the explorer state the path to <code>kino_map_sdk</code>.<br />
+As a result the project will appear in the list. Double-click on it to start up the editor.</p>
+<p><img alt="sdk_hub" src="../../../img/sdk_hub.png" />  </p>
+<h2 id="preparation-for-map-creation">Preparation for map creation</h2>
+<h3 id="lighting-in-the-editor">Lighting in the editor</h3>
+<p>The project has a <strong>Lighting</strong> scene in the folder <strong>Assets/Scenes</strong>. Drag and drop it to the <strong>Hierarchy</strong> tab, in order for the editor lighting to work.<br />
+<strong>This is an optional step</strong>, to have a rough understanding on how the lighting on the map is gonna look in the game.<br />
+You can set up this scene however you like. It will only work in the editor and won't show up in the game.</p>
+<p><img alt="sdk_lighting" src="../../../img/sdk_lighting.png" />  </p>
+<h3 id="map-scene-creation">Map scene creation</h3>
+<p>To create a new scene click on the <strong>File</strong> and then click on <strong>New Scene</strong>.<br />
+Or use <code>Ctrl + N</code> shortcut for <strong>Windows</strong> and <code>Command + N</code> for <strong>OSX</strong>.  </p>
+<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene.png" />  </p>
+<p>Then you need to select an emtpy scene <strong>Empty (Built-in)</strong> and press <strong>Create</strong>  </p>
+<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene_type.png" />  </p>
+<p>Empty scene is created, now save it using <strong>File</strong> and then <strong>Save</strong>.<br />
+Or use <code>Ctrl + S</code> shortcut for <strong>Windows</strong> and <code>Command + S</code> for <strong>OSX</strong>.<br />
+We saved the scene in the folder <strong>Assets/Scenes</strong>, however you can save it in any folder in the project that works for you.</p>
+<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene_save.png" />  </p>
+<h3 id="adding-the-map-content">Adding the map content</h3>
+<p>It is implied that the project will be used to create multiple maps within the same project instead of creating separate projects for every map. So create the <strong>Assets/Resources</strong> folder with <strong>your map's name</strong>, that's going to store all the assets for it.
+This step is optional and is needed for a better project structure and won't affect the final product.<br />
+In the example we created the folder <strong>NewMapTest</strong>.  </p>
+<p><img alt="sdk_new_folder" src="../../../img/sdk_new_folder.png" />  </p>
+<p>Let's start filling it up with assets.<br />
+From this point on you can add any assets to the projects and use it across all the maps you're making.  </p>
+<p>Let's look at the example of importing am <strong>.fbx</strong> model and <strong>textures</strong> for it. Transfer all the needed files to the map's folder.</p>
+<p><img alt="sdk_fbx_drag" src="../../../img/sdk_fbx_drag.png" />  </p>
+<p>Now drag and drop the model to the scene.  </p>
+<p><img alt="sdk_map_hierarchy_drag" src="../../../img/sdk_map_hierarchy_drag.png" />  </p>
+<p>At this point the model is most likely pink and has no material.  </p>
+<p>Create the folder for materials. We created it inside <strong>NewTestMap</strong> and named it <strong>materials</strong>.  </p>
+<p><img alt="sdk_create_mat_folder" src="../../../img/sdk_create_mat_folder.png" />  </p>
+<p>Next step is to extract the materials. To do that select the model inside the <strong>Project</strong> tab, then go to the <strong>Inspector</strong> tab, select <strong>Materials</strong> and click on <strong>Extract Materials...</strong>. Then extract the materials to the folder created earlier.  </p>
+<p><img alt="sdk_materials_extract" src="../../../img/sdk_materials_extract.png" />  </p>
+<p>Now the model should appear correctly and we can get to adjusting materials settings if needed.  </p>
+<p><img alt="sdk_mat_config" src="../../../img/sdk_mat_config.png" />  </p>
+<h2 id="important-notes-regarding-the-map-structure">Important notes regarding the map structure</h2>
+<p>Map for <strong>Kino</strong> should have any any light sources that belong to the <strong>Directional Light</strong> type, and should have any <strong>Volume</strong> components. Also they shouldn't have any cameras on them.  </p>
+<h2 id="setting-up-the-map-structure">Setting up the map structure</h2>
+<h3 id="surfaces">Surfaces</h3>
+<p>Currently Kino support the following types of surfaces:</p>
+<ul>
+<li><code>road</code></li>
+<li><code>grass</code></li>
+<li><code>dirt</code></li>
+<li><code>gravel</code></li>
+<li><code>sand</code></li>
+<li><code>ice</code></li>
+<li><code>snow</code></li>
+<li><code>kerb</code></li>
+</ul>
+<h3 id="unpacking-the-prefab">Unpacking the prefab</h3>
+<p>First you need to <strong>unpack</strong> the prefab. To do that right click on the prefab then select <strong>Prefab</strong> -&gt; <strong>Unpack</strong>.</p>
+<p><img alt="sdk_prefab_unpack" src="../../../img/sdk_prefab_unpack.png" />  </p>
+<h3 id="map-structure">Map structure</h3>
+<p>Let's get to setting up the map's structure.<br />
+This part is very easy. Road surfaces go to the <strong>road</strong> object, grass in the <strong>grass</strong> object and so on.<br />
+Add the object to the scene and name it <a href="#surfaces">surfaces</a>.</p>
+<p><img alt="sdk_new_road" src="../../../img/sdk_new_road.png" />  </p>
+<p>In the example we created <strong>Empty</strong> objects <strong>road</strong> and <strong>grass</strong>. Then we moved all the surfaces that the game should treat as <strong>road</strong> and as <strong>grass</strong>.  </p>
+<p><img alt="sdk_group" src="../../../img/sdk_group.png" />  </p>
+<p>Objects of the other types are structured using the same principle.  </p>
+<h3 id="optimization">Optimization</h3>
+<p>Then we need to select all the static objects, for an example <strong>roads</strong>, <strong>poles</strong>, <strong>building</strong> and give them the <strong>Static</strong> flag.  </p>
+<p><img alt="sdk_static" src="../../../img/sdk_static.png" />  </p>
+<h2 id="colliders">Colliders</h2>
+<p>To process the collisions map should have the colliders set up.<br />
+Select <strong>all</strong> objects, that should have a <strong>collider</strong> and add the <strong>Mesh Collider</strong> component to them.</p>
+<p><img alt="sdk_collider" src="../../../img/sdk_collider.png" />  </p>
+<p>In the examples we <strong>only</strong> gave colliders to <strong>road</strong> and <strong>grass</strong>. In the process of map creation, colliders should be given to <strong>all</strong> the objects that should have a collision.  </p>
+<h2 id="spawn-points">Spawn points</h2>
+<p>To add spawn points you need to create <strong>Empty</strong> objects named <strong>waypoints</strong> In the scene's hierarchy. Then add the spawn points there. The first point in the list is gonna be spawn points. All of these points will be accessible from the <strong>Waypoints</strong> tab of the mod.  </p>
+<p><img alt="sdk_waypoints_root" src="../../../img/sdk_waypoints_root.png" />  </p>
+<h2 id="maptool-and-building-the-map-asset-bundle">MapTool and building the map asset bundle</h2>
+<p>To open the tool for map bulding go to <strong>Kino</strong> -&gt; <strong>MapTool</strong>.  </p>
+<p><img alt="sdk_maptool_open" src="../../../img/sdk_maptool_open.png" />  </p>
+<p>The window that appears can be dragged to any of the editor's groups.  </p>
+<p><img alt="sdk_maptool_drag" src="../../../img/sdk_maptool_drag.png" />  </p>
+<h3 id="maptool">MapTool</h3>
+<p>The field <strong>Creator name</strong> is needed for the map creator's name.<br />
+Bellow is the list of maps. The maps marked with a checkmark are the maps that will be built. Mark only the map you're working on currently. That way the other maps won't be rebuilt and it will speed up the process.<br />
+Bellow you have a button <strong>Add new map entry</strong>, that allows to add a new map to the list. To remove a map from the list click on <strong>Remove '<map_name>'</strong>.</p>
+<p>Then you have <strong>Reload cache</strong> and <strong>Wipe cache</strong> buttons, Which are needed for realoding and deleting the maps' cache. Maps' cache is stored inside <strong>Assets/Build/map_cache.knd</strong> and is needed to save the current state of the tool.  </p>
+<p>Buttons <strong>Build for all platforms</strong> and <strong>Build for '<platform_name>'</strong> is responsible for bulding the map only for the current platform or for all the platorms. Build the map for all platforms only for the final testing or for publishing the map. This will speed up the development process.</p>
+<p><img alt="sdk_maptool" src="../../../img/sdk_maptool.png" />  </p>
+<h3 id="building-the-map">Building the map</h3>
+<p>To build the map fill up the <strong>Creator name</strong> field. Then add a new map to the list if you haven't already.<br />
+Mark the map you want to build with check marks and fill up the fields.<br />
+State the name of the map in the <strong>Map name</strong> field.<br />
+Drag and drop the map's scene to the <strong>Scene</strong> field, in the example bellow it is the <strong>NewMapTest</strong> we created earlier.<br />
+<strong>Load screen</strong> field is intended for the pictures that are going to be used for the loadscreen. Drag and drop the pictures in <strong>.png</strong> or <strong>.jpg</strong> formats that you want to use inside the field.  </p>
+<p>And finally to assemble the map click on <strong>Build for all platforms</strong> or <strong>Build for '<platform_name>'</strong>.<br />
+The final result is located inside the <strong>Build</strong> folder, that you can quickly open from the menu using <strong>Kino</strong> -&gt; <strong>Open maps folder</strong>.</p>
+<p><img alt="sdk_maps_open" src="../../../img/sdk_maps_open.png" />  </p>
+<p>As a result you're gonna have maps for the selected platforms. They can be loaded using <strong>Kino</strong>.</p>
+<p><img alt="sdk_maps_out" src="../../../img/sdk_maps_out.png" />  </p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro into KiNO Maps" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Intro into KiNO Maps
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ru/" class="md-footer__link md-footer__link--next" aria-label="Next: Map creation (RU)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Map creation (RU)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2020 Martin Donath
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://discord.gg/xvGMEEcEEp" target="_blank" rel="noopener" title="Join our Discord!" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.patreon.com/kinomod" target="_blank" rel="noopener" title="Your pledge is truly appreciated" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z"/></svg>
+    </a>
+  
+    
+    
+    <a href="/tos" target="_blank" rel="noopener" title="Terms of Use" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4v18h16v2H4c-1.1 0-2-.9-2-2V4h2m11 3h5.5L15 1.5V7M8 0h8l6 6v12c0 1.11-.89 2-2 2H8a2 2 0 0 1-2-2V2c0-1.11.89-2 2-2m9 16v-2H8v2h9m3-4v-2H8v2h12Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.share", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      
+    
+  </body>
+</html>

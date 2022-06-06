@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/credits/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/tos/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/troubleshooting/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/advanced_usage/custom_maps/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/advanced_usage/custom_maps/en/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-06-01</lastmod>
+         <loc>https://locomoco28.github.com/kino/advanced_usage/custom_maps/legacy/</loc>
+         <lastmod>2022-06-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://locomoco28.github.com/kino/advanced_usage/custom_maps/ru/</loc>
+         <lastmod>2022-06-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://locomoco28.github.com/kino/getting_started/installation/</loc>
+         <lastmod>2022-06-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://locomoco28.github.com/kino/getting_started/usage/</loc>
+         <lastmod>2022-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
