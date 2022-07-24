@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#map-creation-for-kino--wip" class="md-skip">
+        <a href="#map-creation-for-kino-wip" class="md-skip">
           Skip to content
         </a>
       
@@ -657,6 +657,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rigid-bodies" class="md-nav__link">
+    Rigid bodies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#maptool-and-building-the-map-asset-bundle" class="md-nav__link">
     MapTool and building the map asset bundle
   </a>
@@ -942,6 +949,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rigid-bodies" class="md-nav__link">
+    Rigid bodies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#maptool-and-building-the-map-asset-bundle" class="md-nav__link">
     MapTool and building the map asset bundle
   </a>
@@ -986,7 +1000,7 @@
 
 
 
-<h1 id="map-creation-for-kino--wip">Map creation for Kino  (WIP)</h1>
+<h1 id="map-creation-for-kino-wip">Map creation for Kino (WIP)</h1>
 <p>This guide will help you set up the enviroment and start creation custom maps for KINO bundle map loader.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
@@ -998,7 +1012,7 @@
 <p>First of all you need to install Unity Hub. You can download it using the following link:<br />
 <a href="https://unity3d.com/get-unity/download">https://unity3d.com/get-unity/download</a></p>
 <p>Then click on the <strong>Download Unity Hub</strong> button, download and install it.</p>
-<p><img alt="unity_hub" src="../../../img/unity_hub.png" />  </p>
+<p><img alt="unity_hub" src="../../../img/unity_hub.png" /></p>
 <hr />
 <p>Now let's get to Unity installation. Currently the game uses <code>2020.3.25f1</code> version of Unity Editor.<br />
 You can download it using the following link:<br />
@@ -1006,16 +1020,16 @@ You can download it using the following link:<br />
 <p>Here you need to choose the required version. Currently that is <code>2020.x</code></p>
 <p><img alt="unity_header" src="../../../img/unity_header.png" /></p>
 <p>Then find <code>Unity 2020.3.25f1</code> in the list and click on the <strong>Unity Hub</strong> button.</p>
-<p><img alt="unity_download" src="../../../img/unity_download.png" />  </p>
-<p>After the installation the required editor should appear in the list.  </p>
-<p><img alt="unity_hub_installs" src="../../../img/unity_hub_installs.png" />  </p>
+<p><img alt="unity_download" src="../../../img/unity_download.png" /></p>
+<p>After the installation the required editor should appear in the list.</p>
+<p><img alt="unity_hub_installs" src="../../../img/unity_hub_installs.png" /></p>
 <p>Then you need to install additional modules for building the asset bundle for <strong>Windows</strong> and optionally for <strong>OSX</strong><br />
 To do that select the required editor and click on the <strong>gear</strong> then click on <strong>Add modules</strong>.</p>
-<p><img alt="unity_hub_add" src="../../../img/unity_hub_add.png" />  </p>
+<p><img alt="unity_hub_add" src="../../../img/unity_hub_add.png" /></p>
 <p>Remove the check mark from <strong>Visual Studio</strong>, if you don't need it.</p>
-<p><img alt="unity_hub_vs" src="../../../img/unity_hub_vs.png" />  </p>
+<p><img alt="unity_hub_vs" src="../../../img/unity_hub_vs.png" /></p>
 <p>Then add the <strong>Windows Build Support</strong> and optionally <strong>Mac Build Support</strong> components, then click on <strong>Install</strong>.</p>
-<p><img alt="unity_hub_modules" src="../../../img/unity_hub_modules.png" />  </p>
+<p><img alt="unity_hub_modules" src="../../../img/unity_hub_modules.png" /></p>
 <p>Unity installation is complete!</p>
 <h3 id="kinomap-sdk-installation">KinoMap SDK installation</h3>
 <p>Currently <strong>Kino</strong> map creation tools are in a form of a Unity project.<br />
@@ -1026,49 +1040,49 @@ You can download the tools using the following link:<br />
 <li>Installation using git <strong>git</strong>: <code>git clone https://github.com/trbflxr/kino_map_sdk</code></li>
 <li>Installation using <strong>.zip</strong> file: click on the <strong>Code</strong> button, then <strong>Download ZIP</strong></li>
 </ul>
-<p><img alt="sdk_zip" src="../../../img/sdk_zip.png" />  </p>
+<p><img alt="sdk_zip" src="../../../img/sdk_zip.png" /></p>
 <p>Project is downloaded. Now we can get to setting up Unity.</p>
 <h3 id="kinomap-sdk-project-set-up">KinoMap SDK project set up</h3>
 <p>First of all you need to add the project to <strong>Unity Hub</strong>. To do that open <strong>Unity Hub</strong> and click on <strong>Open</strong> button.<br />
 In the explorer state the path to <code>kino_map_sdk</code>.<br />
 As a result the project will appear in the list. Double-click on it to start up the editor.</p>
-<p><img alt="sdk_hub" src="../../../img/sdk_hub.png" />  </p>
+<p><img alt="sdk_hub" src="../../../img/sdk_hub.png" /></p>
 <h2 id="preparation-for-map-creation">Preparation for map creation</h2>
 <h3 id="lighting-in-the-editor">Lighting in the editor</h3>
 <p>The project has a <strong>Lighting</strong> scene in the folder <strong>Assets/Scenes</strong>. Drag and drop it to the <strong>Hierarchy</strong> tab, in order for the editor lighting to work.<br />
 <strong>This is an optional step</strong>, to have a rough understanding on how the lighting on the map is gonna look in the game.<br />
 You can set up this scene however you like. It will only work in the editor and won't show up in the game.</p>
-<p><img alt="sdk_lighting" src="../../../img/sdk_lighting.png" />  </p>
+<p><img alt="sdk_lighting" src="../../../img/sdk_lighting.png" /></p>
 <h3 id="map-scene-creation">Map scene creation</h3>
 <p>To create a new scene click on the <strong>File</strong> and then click on <strong>New Scene</strong>.<br />
-Or use <code>Ctrl + N</code> shortcut for <strong>Windows</strong> and <code>Command + N</code> for <strong>OSX</strong>.  </p>
-<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene.png" />  </p>
-<p>Then you need to select an emtpy scene <strong>Empty (Built-in)</strong> and press <strong>Create</strong>  </p>
-<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene_type.png" />  </p>
+Or use <code>Ctrl + N</code> shortcut for <strong>Windows</strong> and <code>Command + N</code> for <strong>OSX</strong>.</p>
+<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene.png" /></p>
+<p>Then you need to select an emtpy scene <strong>Empty (Built-in)</strong> and press <strong>Create</strong></p>
+<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene_type.png" /></p>
 <p>Empty scene is created, now save it using <strong>File</strong> and then <strong>Save</strong>.<br />
 Or use <code>Ctrl + S</code> shortcut for <strong>Windows</strong> and <code>Command + S</code> for <strong>OSX</strong>.<br />
 We saved the scene in the folder <strong>Assets/Scenes</strong>, however you can save it in any folder in the project that works for you.</p>
-<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene_save.png" />  </p>
+<p><img alt="sdk_new_scene" src="../../../img/sdk_new_scene_save.png" /></p>
 <h3 id="adding-the-map-content">Adding the map content</h3>
 <p>It is implied that the project will be used to create multiple maps within the same project instead of creating separate projects for every map. So create the <strong>Assets/Resources</strong> folder with <strong>your map's name</strong>, that's going to store all the assets for it.
 This step is optional and is needed for a better project structure and won't affect the final product.<br />
-In the example we created the folder <strong>NewMapTest</strong>.  </p>
-<p><img alt="sdk_new_folder" src="../../../img/sdk_new_folder.png" />  </p>
+In the example we created the folder <strong>NewMapTest</strong>.</p>
+<p><img alt="sdk_new_folder" src="../../../img/sdk_new_folder.png" /></p>
 <p>Let's start filling it up with assets.<br />
-From this point on you can add any assets to the projects and use it across all the maps you're making.  </p>
+From this point on you can add any assets to the projects and use it across all the maps you're making.</p>
 <p>Let's look at the example of importing am <strong>.fbx</strong> model and <strong>textures</strong> for it. Transfer all the needed files to the map's folder.</p>
-<p><img alt="sdk_fbx_drag" src="../../../img/sdk_fbx_drag.png" />  </p>
-<p>Now drag and drop the model to the scene.  </p>
-<p><img alt="sdk_map_hierarchy_drag" src="../../../img/sdk_map_hierarchy_drag.png" />  </p>
-<p>At this point the model is most likely pink and has no material.  </p>
-<p>Create the folder for materials. We created it inside <strong>NewTestMap</strong> and named it <strong>materials</strong>.  </p>
-<p><img alt="sdk_create_mat_folder" src="../../../img/sdk_create_mat_folder.png" />  </p>
-<p>Next step is to extract the materials. To do that select the model inside the <strong>Project</strong> tab, then go to the <strong>Inspector</strong> tab, select <strong>Materials</strong> and click on <strong>Extract Materials...</strong>. Then extract the materials to the folder created earlier.  </p>
-<p><img alt="sdk_materials_extract" src="../../../img/sdk_materials_extract.png" />  </p>
-<p>Now the model should appear correctly and we can get to adjusting materials settings if needed.  </p>
-<p><img alt="sdk_mat_config" src="../../../img/sdk_mat_config.png" />  </p>
+<p><img alt="sdk_fbx_drag" src="../../../img/sdk_fbx_drag.png" /></p>
+<p>Now drag and drop the model to the scene.</p>
+<p><img alt="sdk_map_hierarchy_drag" src="../../../img/sdk_map_hierarchy_drag.png" /></p>
+<p>At this point the model is most likely pink and has no material.</p>
+<p>Create the folder for materials. We created it inside <strong>NewTestMap</strong> and named it <strong>materials</strong>.</p>
+<p><img alt="sdk_create_mat_folder" src="../../../img/sdk_create_mat_folder.png" /></p>
+<p>Next step is to extract the materials. To do that select the model inside the <strong>Project</strong> tab, then go to the <strong>Inspector</strong> tab, select <strong>Materials</strong> and click on <strong>Extract Materials...</strong>. Then extract the materials to the folder created earlier.</p>
+<p><img alt="sdk_materials_extract" src="../../../img/sdk_materials_extract.png" /></p>
+<p>Now the model should appear correctly and we can get to adjusting materials settings if needed.</p>
+<p><img alt="sdk_mat_config" src="../../../img/sdk_mat_config.png" /></p>
 <h2 id="important-notes-regarding-the-map-structure">Important notes regarding the map structure</h2>
-<p>Map for <strong>Kino</strong> should have any any light sources that belong to the <strong>Directional Light</strong> type, and should have any <strong>Volume</strong> components. Also they shouldn't have any cameras on them.  </p>
+<p>Map for <strong>Kino</strong> should have any any light sources that belong to the <strong>Directional Light</strong> type, and should have any <strong>Volume</strong> components. Also they shouldn't have any cameras on them.</p>
 <h2 id="setting-up-the-map-structure">Setting up the map structure</h2>
 <h3 id="surfaces">Surfaces</h3>
 <p>Currently Kino support the following types of surfaces:</p>
@@ -1084,49 +1098,57 @@ From this point on you can add any assets to the projects and use it across all 
 </ul>
 <h3 id="unpacking-the-prefab">Unpacking the prefab</h3>
 <p>First you need to <strong>unpack</strong> the prefab. To do that right click on the prefab then select <strong>Prefab</strong> -&gt; <strong>Unpack</strong>.</p>
-<p><img alt="sdk_prefab_unpack" src="../../../img/sdk_prefab_unpack.png" />  </p>
+<p><img alt="sdk_prefab_unpack" src="../../../img/sdk_prefab_unpack.png" /></p>
 <h3 id="map-structure">Map structure</h3>
 <p>Let's get to setting up the map's structure.<br />
 This part is very easy. Road surfaces go to the <strong>road</strong> object, grass in the <strong>grass</strong> object and so on.<br />
 Add the object to the scene and name it <a href="#surfaces">surfaces</a>.</p>
-<p><img alt="sdk_new_road" src="../../../img/sdk_new_road.png" />  </p>
-<p>In the example we created <strong>Empty</strong> objects <strong>road</strong> and <strong>grass</strong>. Then we moved all the surfaces that the game should treat as <strong>road</strong> and as <strong>grass</strong>.  </p>
-<p><img alt="sdk_group" src="../../../img/sdk_group.png" />  </p>
-<p>Objects of the other types are structured using the same principle.  </p>
+<p><img alt="sdk_new_road" src="../../../img/sdk_new_road.png" /></p>
+<p>In the example we created <strong>Empty</strong> objects <strong>road</strong> and <strong>grass</strong>. Then we moved all the surfaces that the game should treat as <strong>road</strong> and as <strong>grass</strong>.</p>
+<p><img alt="sdk_group" src="../../../img/sdk_group.png" /></p>
+<p>Objects of the other types are structured using the same principle.</p>
 <h3 id="optimization">Optimization</h3>
-<p>Then we need to select all the static objects, for an example <strong>roads</strong>, <strong>poles</strong>, <strong>building</strong> and give them the <strong>Static</strong> flag.  </p>
-<p><img alt="sdk_static" src="../../../img/sdk_static.png" />  </p>
+<p>Then we need to select all the static objects, for an example <strong>roads</strong>, <strong>poles</strong>, <strong>building</strong> and give them the <strong>Static</strong> flag.</p>
+<p><img alt="sdk_static" src="../../../img/sdk_static.png" /></p>
 <h2 id="colliders">Colliders</h2>
 <p>To process the collisions map should have the colliders set up.<br />
 Select <strong>all</strong> objects, that should have a <strong>collider</strong> and add the <strong>Mesh Collider</strong> component to them.</p>
-<p><img alt="sdk_collider" src="../../../img/sdk_collider.png" />  </p>
-<p>In the examples we <strong>only</strong> gave colliders to <strong>road</strong> and <strong>grass</strong>. In the process of map creation, colliders should be given to <strong>all</strong> the objects that should have a collision.  </p>
+<p><img alt="sdk_collider" src="../../../img/sdk_collider.png" /></p>
+<p>In the examples we <strong>only</strong> gave colliders to <strong>road</strong> and <strong>grass</strong>. In the process of map creation, colliders should be given to <strong>all</strong> the objects that should have a collision.</p>
 <h2 id="spawn-points">Spawn points</h2>
-<p>To add spawn points you need to create <strong>Empty</strong> objects named <strong>waypoints</strong> In the scene's hierarchy. Then add the spawn points there. The first point in the list is gonna be spawn points. All of these points will be accessible from the <strong>Waypoints</strong> tab of the mod.  </p>
-<p><img alt="sdk_waypoints_root" src="../../../img/sdk_waypoints_root.png" />  </p>
+<p>To add spawn points you need to create <strong>Empty</strong> objects named <strong>waypoints</strong> In the scene's hierarchy. Then add the spawn points there. The first point in the list is gonna be spawn points. All of these points will be accessible from the <strong>Waypoints</strong> tab of the mod.</p>
+<p><img alt="sdk_waypoints_root" src="../../../img/sdk_waypoints_root.png" /></p>
+<h2 id="rigid-bodies">Rigid bodies</h2>
+<p>To add a dynamic <strong>RigidBody</strong> ojbect, create an <strong>Empty</strong> object called <strong>rigid_bodies</strong> in the scene's hierarchy.<br />
+Add all the dynamic objects inside of it. Also make sure that all the objects inside <strong>rigid_bodies</strong> <strong>DO NOT</strong> have a <strong>static</strong> flag.<br />
+Also you need to add the <strong>RigidBody</strong> component to all of the objects.</p>
+<p><img alt="sdk_rigid_bodies" src="../../../img/sdk_rigid_bodies.png" /></p>
+<p>After that you can get to setting up the object's parameters. Play around with the values to get the desired result.</p>
+<p><img alt="sdk_rigid_body" src="../../../img/sdk_rigid_body.png" /></p>
 <h2 id="maptool-and-building-the-map-asset-bundle">MapTool and building the map asset bundle</h2>
-<p>To open the tool for map bulding go to <strong>Kino</strong> -&gt; <strong>MapTool</strong>.  </p>
-<p><img alt="sdk_maptool_open" src="../../../img/sdk_maptool_open.png" />  </p>
-<p>The window that appears can be dragged to any of the editor's groups.  </p>
-<p><img alt="sdk_maptool_drag" src="../../../img/sdk_maptool_drag.png" />  </p>
+<p>To open the tool for map bulding go to <strong>Kino</strong> -&gt; <strong>MapTool</strong>.</p>
+<p><img alt="sdk_maptool_open" src="../../../img/sdk_maptool_open.png" /></p>
+<p>The window that appears can be dragged to any of the editor's groups.</p>
+<p><img alt="sdk_maptool_drag" src="../../../img/sdk_maptool_drag.png" /></p>
 <h3 id="maptool">MapTool</h3>
 <p>The field <strong>Creator name</strong> is needed for the map creator's name.<br />
 Bellow is the list of maps. The maps marked with a checkmark are the maps that will be built. Mark only the map you're working on currently. That way the other maps won't be rebuilt and it will speed up the process.<br />
 Bellow you have a button <strong>Add new map entry</strong>, that allows to add a new map to the list. To remove a map from the list click on <strong>Remove '<map_name>'</strong>.</p>
-<p>Then you have <strong>Reload cache</strong> and <strong>Wipe cache</strong> buttons, Which are needed for realoding and deleting the maps' cache. Maps' cache is stored inside <strong>Assets/Build/map_cache.knd</strong> and is needed to save the current state of the tool.  </p>
-<p>Buttons <strong>Build for all platforms</strong> and <strong>Build for '<platform_name>'</strong> is responsible for bulding the map only for the current platform or for all the platorms. Build the map for all platforms only for the final testing or for publishing the map. This will speed up the development process.</p>
-<p><img alt="sdk_maptool" src="../../../img/sdk_maptool.png" />  </p>
+<p>Then you have <strong>Reload cache</strong> and <strong>Wipe cache</strong> buttons, which are needed for reloading and deleting the maps' cache. Maps' cache is stored inside <strong>Assets/Build/map_cache.knd</strong> and is needed to save the current state of the tool.</p>
+<p>Buttons <strong>Build for all platforms</strong> and <strong>Build for '<platform_name>'</strong> is responsible for bulding the map only for the current platform or for all the platforms. Build the map for all platforms only for the final testing or for publishing the map. This will speed up the development process.
+<img alt="sdk_maptool" src="images/sdk_maptool.png" /></p>
+<p><img alt="sdk_maptool" src="../../../img/sdk_maptool.png" /></p>
 <h3 id="building-the-map">Building the map</h3>
 <p>To build the map fill up the <strong>Creator name</strong> field. Then add a new map to the list if you haven't already.<br />
 Mark the map you want to build with check marks and fill up the fields.<br />
 State the name of the map in the <strong>Map name</strong> field.<br />
 Drag and drop the map's scene to the <strong>Scene</strong> field, in the example bellow it is the <strong>NewMapTest</strong> we created earlier.<br />
-<strong>Load screen</strong> field is intended for the pictures that are going to be used for the loadscreen. Drag and drop the pictures in <strong>.png</strong> or <strong>.jpg</strong> formats that you want to use inside the field.  </p>
+<strong>Load screen</strong> field is intended for the pictures that are going to be used for the loadscreen. Drag and drop the pictures in <strong>.png</strong> or <strong>.jpg</strong> formats that you want to use inside the field.</p>
 <p>And finally to assemble the map click on <strong>Build for all platforms</strong> or <strong>Build for '<platform_name>'</strong>.<br />
 The final result is located inside the <strong>Build</strong> folder, that you can quickly open from the menu using <strong>Kino</strong> -&gt; <strong>Open maps folder</strong>.</p>
-<p><img alt="sdk_maps_open" src="../../../img/sdk_maps_open.png" />  </p>
+<p><img alt="sdk_maps_open" src="../../../img/sdk_maps_open.png" /></p>
 <p>As a result you're gonna have maps for the selected platforms. They can be loaded using <strong>Kino</strong>.</p>
-<p><img alt="sdk_maps_out" src="../../../img/sdk_maps_out.png" />  </p>
+<p><img alt="sdk_maps_out" src="../../../img/sdk_maps_out.png" /></p>
 
               
             </article>

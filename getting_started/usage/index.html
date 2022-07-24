@@ -563,6 +563,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#custom-camera" class="md-nav__link">
+     Custom Camera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-hud" class="md-nav__link">
      Custom HUD
   </a>
@@ -952,6 +959,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#custom-camera" class="md-nav__link">
+     Custom Camera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-hud" class="md-nav__link">
      Custom HUD
   </a>
@@ -1024,11 +1038,10 @@
 <h2 id="supporter-only-features">Supporter <strong>only</strong> features</h2>
 <p>We have some features reserved for our supporters as an appreciation for their support to make this mod possible.</p>
 <h3 id="extras"><img src="../img/icons/extras.png" style="height: 1.4rem" alt="Events Icon"/> Extras</h3>
-<p>In the extras tab you can enable your custom nametag as well as select whether it will show in the front or after you nickname. Your tag can be set in the <code>tag.txt</code> file located at:<br />
-<code>../Carx Drift Racing Online/BepInEx/plugins/KN_Base/tag.txt</code></p>
+<p>In this module you can create a custom <strong>name tag</strong> that can be shown before or after your nickname.</p>
+<p>You can also set up the colors for your tag, as well as your Steam nickname using a solid color, gradient or by coloring each letter separately.</p>
+<p>You are also able to save up to 3 presets for your name.</p>
 <p><img alt="extras_tut" src="../../img/extras.png" /></p>
-<p>Here's an example of how the file should look:</p>
-<p><img alt="tag" src="../../img/custom_tag.png" /></p>
 <h3 id="swaps"><img src="../img/icons/engine_swap.png" style="height: 1.4rem" alt="Swaps Icon" /> Swaps</h3>
 <p>In this tab you can swap the engine of the car and adjust the engine settings on the track.</p>
 <p><img alt="swaps_tut" src="../../img/swaps.png" /></p>
@@ -1072,19 +1085,19 @@ Realtime reflections have 2 quality options: <strong>Low</strong> only relfects 
 <p><img alt="graphics_fog" src="../../img/graphics_fog.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">For cubemaps</p>
-<p>nx = +x<br />
-ny = -y<br />
-nz = -z<br />
-px = +x<br />
-py = +y<br />
-pz = +z</p>
 </div>
+<p>nx = +x<br />
+ ny = -y<br />
+ nz = -z<br />
+ px = +x<br />
+ py = +y<br />
+ pz = +z</p>
 <p><code>.png</code> and <code>.jpg</code> <ins>only</ins></p>
 <p>All the face images should be inside a folder.</p>
 <div class="admonition example">
 <p class="admonition-title">For panoramas:</p>
-<p>Panoramas can be used in <code>.png</code> and <code>.jpg</code> formats. You can convert HDR and EXR skyboxes to .png or .jpg to use them with the mod.</p>
 </div>
+<p>Panoramas can be used in <code>.png</code> and <code>.jpg</code> formats. You can convert HDR and EXR skyboxes to .png or .jpg to use them with the mod.</p>
 <p>Skyboxes are installed into the following folder:</p>
 <div class="highlight"><pre><span></span><code>CarX Drift Racing Online\BepInEx\plugins\KN_Base\sky
 </code></pre></div>
@@ -1093,10 +1106,11 @@ pz = +z</p>
 <kbd>S</kbd> button next to a players name allows you to check the selected players specs.</p>
 <div class="admonition info">
 <p class="admonition-title">Supporter only</p>
-<p><kbd>C</kbd> button disables selected player's collision.<br />
-<kbd>H</kbd> button allows you to hide players.  </p>
-<p>These two buttons, as mentioned in <a href="#extra-player-options">Supporter only features</a>, are only available for supporters!</p>
 </div>
+<p><kbd>C</kbd> button disables selected player's collision.<br />
+ <kbd>H</kbd> button allows you to hide players.</p>
+<pre><code>These two buttons, as mentioned in [Supporter only features](#extra-player-options), are only available for supporters!
+</code></pre>
 <p><img alt="players_tut" src="../../img/players.png" /></p>
 <h3 id="collision-manager"><img src="../img/icons/collisions.png" style="height: 1.4rem" alt="Collisions Icon" /> Collision manager</h3>
 <p>In the collision manager you can disable collisions for console players or hide them completely.
@@ -1133,6 +1147,14 @@ From the playback tab you can load your replays and focus on cars from the repla
 <p><img alt="cinematic_tut" src="../../img/cinematic_2.png" /><br />
 On the timeline you can set the starting and ending point of your replay by dragging arrows at the start and the end of the timeline. You can also adjust the playback speed and loop your replay.
 <img alt="timeline" src="../../img/timeline.png" /></p>
+<h3 id="custom-camera"><img src="../img/icons/custom_camera.png" style="height: 1.4rem" alt="Custom Camera Icon" /> Custom Camera</h3>
+<p>The feature allows to adjust different camera parameters for the 3rd person cameras. The mod automatically forces dynamic camera setting for the better look. You can save and load custom camera presets from the file.</p>
+<div class="highlight"><pre><span></span><code>...\CarX Drift Racing Online\BepInEx\plugins\KN_Base\cameras
+</code></pre></div>
+<p>Or save up to 3 presets inside the menu for quick application.</p>
+<p><img alt="custom_camera" src="../../img/custom_camera.png" /></p>
+<p>Camera shake can also be turned on and off and adjusted to your taste.
+<img alt="custom_camera_shake" src="../../img/custom_camera_shake.png" /></p>
 <h3 id="custom-hud"><img src="../img/icons/custom_hud.png" style="height: 1.4rem" alt="Custom HUD Icon" /> Custom HUD</h3>
 <p>Currently only allows you to enable simplified tachometer that only works with in-game UI hidden (F11 by default.)
 <img alt="hud_tut" src="../../img/custom_hud.png" /></p>

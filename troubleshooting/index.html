@@ -620,6 +620,26 @@
     Still having issues? Get the log.
   </a>
   
+    <nav class="md-nav" aria-label="Still having issues? Get the log.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-bepinex" class="md-nav__link">
+    For BepInEx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-kino-loader" class="md-nav__link">
+    For Kino Loader
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -739,6 +759,26 @@
     Still having issues? Get the log.
   </a>
   
+    <nav class="md-nav" aria-label="Still having issues? Get the log.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-bepinex" class="md-nav__link">
+    For BepInEx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-kino-loader" class="md-nav__link">
+    For Kino Loader
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -788,22 +828,23 @@ The mod relies on the <strong>Visual C++ Redistributable for Visual Studio 2015,
 even if your installation 100% correct, this might be the cause. However only resort to this if KiNO is the only mod that isn't working. You will need the x64 version of the VC Redist that you can also download from the <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Miscrosoft website</a>. Download and install the <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">vc_redist.x64.exe</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>After installing <strong>.NET Framework</strong> and <strong>Visual C++ Redistributable</strong> you might have to restart your PC for it to work.</p>
 </div>
+<p>After installing <strong>.NET Framework</strong> and <strong>Visual C++ Redistributable</strong> you might have to restart your PC for it to work.</p>
 <h3 id="still-having-issues-get-the-log"><strong>Still having issues? Get the log.</strong></h3>
+<h4 id="for-bepinex">For BepInEx</h4>
 <ol>
 <li>
-<p>Go to your CarX Drift Racing Online folder and find the file called <code>doorstop_config.ini</code>.  </p>
+<p>Go to your CarX Drift Racing Online folder and find the file called <code>doorstop_config.ini</code>.</p>
 </li>
 <li>
-<p>Open the file with any text editor and find a following line:
-    <div class="highlight"><pre><span></span><code>redirectOutputLog=false
-</code></pre></div></p>
+<p>Open the file with any text editor and find a following line:</p>
+<div class="highlight"><pre><span></span><code>redirectOutputLog=false
+</code></pre></div>
 </li>
 <li>
-<p>Change the value from <strong>false</strong> to <strong>true</strong> like in the example bellow:
-    <div class="highlight"><pre><span></span><code>redirectOutputLog=true
-</code></pre></div></p>
+<p>Change the value from <strong>false</strong> to <strong>true</strong> like in the example bellow:</p>
+<div class="highlight"><pre><span></span><code>redirectOutputLog=true
+</code></pre></div>
 </li>
 <li>
 <p>Start the game once. Close the game right after you load into the garage (or if you have an issue with a specific feature, close the game after trying to use the feature). You should have a file called <code>output_log.txt</code> generated inside the CarX Drift Racing Online folder.</p>
@@ -815,6 +856,25 @@ even if your installation 100% correct, this might be the cause. However only re
 <div class="admonition note">
 <p class="admonition-title">If the file isn't there you might have an issue with <strong>BepInEx</strong>, unfortunately we cannot provide support for that.</p>
 </div>
+<h4 id="for-kino-loader">For Kino Loader</h4>
+<ol>
+<li>
+<p>Start the game</p>
+</li>
+<li>
+<p>If you have an issue with a specific feature make sure to reproduce it</p>
+</li>
+<li>
+<p>Close the game normally</p>
+</li>
+<li>
+<p>The file will appear inside the following folder:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>CarX Drift Racing Online/kino/output.log
+CarX Drift Racing Online/kino/kino.log
+</code></pre></div>
+<p>The loader will generate the file automatically so you don't have to change any values.</p>
 
               
             </article>
